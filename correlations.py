@@ -7,7 +7,6 @@ Created on Mon Feb 17 08:28:17 2020
 """
 
 import numpy as np
-import math
 
 
 def l1_cross_distances(X):
@@ -95,35 +94,4 @@ def compute_R(theta, X):
     return R, inv_R
 
 
-if __name__ == '__main__':
-    x1 = np.ones(10)
-    x2 = np.ones(10)+2
-    x3 = np.ones(10)+3
-    x4 = np.ones(10)+0.8
-    X = np.vstack((x1, x2, x3, x4))
-    print(X.shape)
-    theta = np.ones(10)*0.1
-    res = r(x1, x2, theta)
-    print(res)
-    res2, _ = l1_cross_distances(X)
-    print(res2)
-    print()
-    res3 = squar_exp(theta, res2)
-    print("final res = ", res3)
-    print("ATTENTION", _)
-    print("ATTENTION", _+1)
-    idx = _
-    matrix_R = np.eye(4)
-    for i in range(res3.shape[0]):
-        print("achtung", idx[i][1])
-        print("achtung", res3[i][0])
-        matrix_R[idx[i][0],idx[i][1]] = res3[i][0]
-    print("FINAL", matrix_R)
-    matrix_R = matrix_R + matrix_R.T - np.eye(4)
-    print(matrix_R)
-    
-#    for i in range(1, matrix_R.shape[0]):
-#        for j in range(i):
-#            matrix_R[i,j] = 0#res3[i+j,0]
-    
 

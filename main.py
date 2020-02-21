@@ -5,10 +5,9 @@ Created on Mon Feb 17 18:50:54 2020
 
 @author: macbookthibaultlahire
 """
-#import os
+
 import time
 
-#os.chdir("C:/Users/samle/Documents/MAths/M1/MVA/Bayesian machine/mémoire/code")
 import numpy as np
 import scipy.optimize as so
 import matplotlib.pyplot as plt
@@ -101,7 +100,7 @@ plt.plot(abscisse, ord3, c='red', alpha=0.2)
 plt.plot(abscisse, ord4, c='red', alpha=0.2)
 plt.title('Kriging on a sinus, n={:}'.format(n))
 plt.legend()
-plt.savefig("kriging_on_sinus.png")
+#plt.savefig("kriging_on_sinus.png")
 plt.show()
 
 
